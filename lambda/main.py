@@ -36,7 +36,7 @@ def handler(event, context):
                 "Access-Control-Allow-Methods": "GET, OPTIONS",
                 "Access-Control-Allow-Headers": "Content-Type"
             },
-            "body": json.dumps(response_body, default=str)
+            "body": json.dumps(response_body, default=str, indent=2)
         }
         
     except Exception as e:
@@ -51,5 +51,5 @@ def handler(event, context):
                 "message": "Internal server error",
                 "error": str(e),
                 "version": os.environ.get("VERSION", "1.0.0")
-            })
+            }, indent=2)
         }
