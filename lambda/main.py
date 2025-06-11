@@ -3,4 +3,7 @@ def handler(event, context):
         "message": "test",
         "version": "1.0.0"
     }
-    return {"statusCode": 200, "body": {respond_body}}
+    return {
+        "statusCode": 200, 
+        "body": json.dumps(respond_body) 
+    }
