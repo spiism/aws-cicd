@@ -1,3 +1,5 @@
+import json
+
 def handler(event, context):
     respond_body = {
         "message": "test",
