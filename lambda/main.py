@@ -1,9 +1,11 @@
 import json
+import os
 
 def handler(event, context):
+    version = os.environ.get("VERSION", "0.0")
     respond_body = {
         "message": "test",
-        "version": "1.0.0"
+        "version": {version }
     }
     return {
         "statusCode": 200, 
