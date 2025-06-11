@@ -1,2 +1,6 @@
 def handler(event, context):
-    return {"statusCode": 200, "body": "Hi"}
+    respond_body = {
+        "message": "test",
+        "version": "1.0.0"
+    }
+    return {"statusCode": 200, "body": {respond_body}}
